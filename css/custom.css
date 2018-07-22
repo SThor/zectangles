@@ -10,8 +10,3 @@ canvas {
   width:200;
   height:200;
 } /* To remove the scrollbars */
-
-.col-centered{
-    float: none;
-    margin: 0 auto;
-}
