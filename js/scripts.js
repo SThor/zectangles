@@ -13,7 +13,7 @@ var canvas = {
     //canvas.width = window.innerWidth;
     //canvas.height = window.innerHeight - grid.canvas.offsetTop;
     
-    var minSide = Math.min(window.innerWidth,window.innerHeight)
+    var minSide = Math.min(window.innerWidth,window.innerHeight);
     
     canvas.canvas.width = (4/5)*minSide;
     canvas.canvas.height = (4/5)*minSide;
@@ -50,7 +50,7 @@ var canvas = {
     var angle = Math.atan(canvas.settings.offsetInIt/(1-canvas.settings.offsetInIt));
     var scale = canvas.settings.offsetInIt/Math.sin(angle);
     if((i+j)%2===0){
-      angle = -angle
+      angle = -angle;
     }
     for(k=0;k<canvas.settings.itInCell;k++){
       canvas.ctx.strokeRect(0-cellLenght/2,0-cellLenght/2,cellLenght,cellLenght);
