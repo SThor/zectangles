@@ -1,0 +1,17 @@
+/* { margin:0; padding:0; } /* to remove the top and left whitespace */
+
+html, body { width:100%; height:100%; } /* just to be sure these are full screen*/
+
+canvas {
+  display:block;
+  margin:auto;
+  padding:auto;
+  /*background: black;*/
+  width:200;
+  height:200;
+} /* To remove the scrollbars */
+
+.col-centered{
+    float: none;
+    margin: 0 auto;
+}
