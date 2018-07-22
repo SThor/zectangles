@@ -4,9 +4,9 @@ var canvas = {
   color_bg:"white",
   color_main:"black",
   settings:{
-    cellsInWidth : 3,
-    itInCell : 20,
-    offsetInIt : 0.1
+    cellsInWidth : 4,
+    itInCell : 100,
+    offsetInIt : 0.05
   },
   resizeCanvas : function() {
     //canvas.width = window.innerWidth;
@@ -25,8 +25,6 @@ var canvas = {
   },
   
   drawStuff: function() {
-    console.log("test?");
-    //canvas.ctx.fillStyle = canvas.color_bg
     canvas.ctx.setTransform(1, 0, 0, 1, 0, 0);
     canvas.ctx.clearRect(0,0,canvas.canvas.width,canvas.canvas.height);
     canvas.ctx.strokeStyle = canvas.color_main;
@@ -48,7 +46,6 @@ var canvas = {
     var k;
     var angle = Math.atan(canvas.settings.offsetInIt/(1-canvas.settings.offsetInIt));
     var scale = canvas.settings.offsetInIt/Math.sin(angle);
-    console.log((i+j)%2)
     if((i+j)%2===0){
       angle = -angle
     }
