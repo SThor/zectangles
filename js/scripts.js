@@ -5,7 +5,7 @@ var canvas = {
   color_main:"black",
   settings:{
     cellsInWidth : 3,
-    itInCell : 2,
+    itInCell : 10,
     offsetInIt : 0.25
   },
   resizeCanvas : function() {
@@ -46,13 +46,13 @@ var canvas = {
   drawCell: function(i,j,cellLenght){
     canvas.ctx.strokeRect(0-cellLenght/2,0-cellLenght/2,cellLenght,cellLenght);
     var k;
-    var angle = Math.atan(canvas.settings.offsetInIt);
-    var scale = 1/Math.cos(angle);
+    var angle = Math.atan(canvas.settings.offsetInIt/(1-canvas.settings.offsetInIt));
+    var scale = 0.25/Math.sin(angle);
     console.log(angle,scale)
     for(k=0;k<canvas.settings.itInCell;k++){
       canvas.ctx.strokeRect(0-cellLenght/2,0-cellLenght/2,cellLenght,cellLenght);
       canvas.ctx.rotate(angle);
-      //canvas.ctx.scale(scale,scale);
+      canvas.ctx.scale(scale,scale);
     }
   }
 };
