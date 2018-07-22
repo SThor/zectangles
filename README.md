@@ -6,9 +6,9 @@ You can change the parameters by entering this in the console :
 
 ```
 canvas.settings={
-    cellsInWidth : 4,
-    itInCell : 100,
-    offsetInIt : 0.05
+    cellsInWidth : 3,
+    itInCell : 20,
+    offsetInIt : 0.1
 };
 canvas.resizeCanvas();
 ```
